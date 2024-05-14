@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--ICECREAM MAKER LABEL-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#60B0BA"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="ICE CREAM GABUN"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+
+    <!--ICECREAM NAME INPUT-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Ice Cream Name:"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/ETmame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Ice Cream Name"
+            android:textSize="23dp" />
+    </LinearLayout>
+
+
+    <!--ICE CREAM ID INPUT-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Ice Cream ID:"
+            android:textSize="22dp" />
+
+        <Spinner
+            android:id="@+id/SPid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/icecreamIDs"
+            android:hint="Enter Ice Cream ID" />
+
+
+    </LinearLayout>
+
+
+    <!--FLAVOR-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Ice Cream Flavor:"
+            android:textSize="25dp" />
+
+        <RadioGroup
+            android:id="@+id/icecream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/RBvanilla"
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Vanilla"
+                android:textColor="#CF3434"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/RBchocolate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Chocolate"
+                android:textColor="#5C2F2F"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/RBstrawberry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:text="Strawberry"
+                android:textColor="#C61EB6"
+                android:textSize="20dp" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <!--TOPPINGS-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ice Cream Toppings:"
+            android:textSize="25dp" />
+
+        <!--1stLINE TOPPINGS-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/CBsprinkles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Sprinkles"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/CBkisses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kisses"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/CBmarshmallow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marshmallow"
+                android:textSize="18dp"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+        <!--2ND LAYER TOPPINGS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/CBnips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nips"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/CBcookies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cookies"
+                android:textSize="18dp" />
+
+
+            <CheckBox
+                android:id="@+id/syrup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Syrup"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--    button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/makeic"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/icecream" />
+
+
+</LinearLayout>
